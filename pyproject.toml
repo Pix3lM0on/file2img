@@ -1,0 +1,13 @@
+[project]
+name = "file2img"
+version = "0.1.0"
+description = "Convert files into images."
+requires-python = ">=3.10"
+
+[project.scripts]
+file2img = "file2img.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]

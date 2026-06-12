@@ -21,12 +21,14 @@ basic program that can take a file and turn its contents into an image.
   ```sh
   file2img encode some_file.mkv output.png
   ```
+
 - Converting back
   ```sh
   file2img decode some_file.png [output]
   ```
   Output name is optional. If you skip it, file2img will try to pull the
   original name from the image metadata.
+
 - Changing defaults
   ```sh
   file2img config set default.pattern "spiral"
