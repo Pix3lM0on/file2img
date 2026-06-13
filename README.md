@@ -10,7 +10,6 @@ basic program that can take a file and turn its contents into an image.
 - [x] Create the project
 - [x] Write the first README
 - [x] Make the initial commit
-- [ ] Decide the first version's language and GUI toolkit
 - [ ] Make (working) CLI
 - [ ] Make GUI wrapper for the ((maybe) working) CLI
 - [ ] Save the generated image
