@@ -10,8 +10,10 @@ basic program that can take a file and turn its contents into an image.
 - [x] Create the project
 - [x] Write the first README
 - [x] Make the initial commit
-- [ ] Make (working) CLI
+- [x] Make (working) CLI
 - [ ] Make GUI wrapper for the ((maybe) working) CLI
+  - [ ] Qt GUI
+  - [ ] GTK GUI
 - [ ] Save the generated image
 
 ## Example usage
