@@ -9,13 +9,24 @@ from .patterns import available_patterns
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="file2img")
+    parser = argparse.ArgumentParser(
+        prog="file2img",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""examples:
+  file2img encode input.bin output.png
+  file2img encode input.bin output.png --pattern=row
+  file2img encode input.bin output.png -p spiral_reverse
+  file2img decode output.png restored.bin
+
+Use "file2img <command> -h" for command-specific options.""",
+    )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     encode_parser = subparsers.add_parser("encode", help="convert a file into an image")
     encode_parser.add_argument("input")
     encode_parser.add_argument("output")
     encode_parser.add_argument(
+        "-p",
         "--pattern",
         choices=available_patterns(),
         default="spiral",

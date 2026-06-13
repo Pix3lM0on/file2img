@@ -21,6 +21,11 @@ basic program that can take a file and turn its contents into an image.
   ```sh
   file2img encode some_file.mkv output.png
   ```
+  You can choose a pattern with `--pattern=...` or `-p`:
+  ```sh
+  file2img encode some_file.mkv output.png --pattern=row
+  file2img encode some_file.mkv output.png -p spiral_reverse
+  ```
 
 - Converting back
   ```sh
@@ -48,3 +53,9 @@ basic program that can take a file and turn its contents into an image.
 
 - default.pattern
   - You can see those above.
+
+## Tiny technical note
+
+The image stores a small `file2img` header in the pixels themselves, so the
+decoder can figure out stuff like the original filename, file size, checksum,
+and pattern even if PNG text metadata gets bonked.
